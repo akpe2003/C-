@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace leg7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double dAnswer;
+            double dHours;
+            Double dMinutes;
+            Console.Write("Please enter a number here.");
+            dAnswer = Convert.ToDouble(Console.ReadLine());
+            dHours =(int) (dAnswer / 3600);
+            dMinutes =(int) (dAnswer / 60);
+            Console.WriteLine();
+            Console.WriteLine("The total number of hours in: " + dAnswer + " minutes is " + dHours);
+            Console.WriteLine();
+            Console.WriteLine("The total number of minutes in: " + dAnswer +  " minutes is " + dMinutes);
+            Console.WriteLine();
+            Console.WriteLine("Press any key to close!");
+            Console.ReadKey();
+        }
+    }
+}
