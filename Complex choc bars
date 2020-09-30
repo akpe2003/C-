@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace leg6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int iNumberofCrisps = 10;
+            int iChocbars = 20;
+            int iBuy2;
+            int iBuy;
+            int iRemaining;
+            int iRemaining2;
+            double dCrisps = 0.30;
+            double dChocbars = 0.25;
+            double dTotalAmount = 1000;
+            double dAmounttoPay;
+            double dMoneyCrisps;
+            double dMoneyChocbars;
+            double dFinalMoney;
+            Console.WriteLine("The total amount of money in the vending machine is: " +dTotalAmount.ToString("C"));
+            Console.WriteLine();
+            Console.WriteLine("The total number of crisps in the vending machine is: " + iNumberofCrisps);
+            Console.WriteLine();
+            Console.WriteLine("The total number of chocbars in the vending machine is: " + iChocbars);
+            Console.WriteLine();
+            Console.Write("How many packets of crisps do you want to buy?");
+            iBuy = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("How many packets of Chocbars do you want to buy?");
+            iBuy2 = Convert.ToInt32(Console.ReadLine());
+            dMoneyCrisps = iBuy * dCrisps;
+            dMoneyChocbars = iBuy2 * dChocbars;
+            dAmounttoPay = dMoneyChocbars + dMoneyCrisps;
+            dFinalMoney = dAmounttoPay + dTotalAmount;
+            iRemaining = iNumberofCrisps - iBuy;
+            iRemaining2 = iChocbars - iBuy2;
+            Console.WriteLine();
+            Console.WriteLine("The total amount you have to pay is: " + dAmounttoPay.ToString("C"));
+            Console.WriteLine();
+            Console.WriteLine("The total amount of money in the vending machine is: " + dFinalMoney.ToString("C"));
+            Console.WriteLine();
+            Console.WriteLine("The remaining number of crisps in the vending maching is: " + iRemaining);
+            Console.WriteLine();
+            Console.WriteLine("The remaining number of Chockbars in the vending machine is: " + iRemaining2);
+            Console.WriteLine();
+            Console.WriteLine("Press any key to close");
+            Console.ReadKey();
+        }
+    }
+}
