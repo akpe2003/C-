@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace leg4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int iNumberofCrisps = 10;
+            int iBuy;
+            int iRemaining;
+            Console.WriteLine("The total number of crisps in the vending machine is: " + iNumberofCrisps);
+            Console.WriteLine();
+            Console.Write("How many packets of crisps do you want to buy?");
+            iBuy = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            iRemaining = iNumberofCrisps - iBuy;
+            Console.WriteLine("The remaining number of crisps in the vending maching is: " + iRemaining);
+            Console.WriteLine();
+            Console.WriteLine("Press any key to close");
+            Console.ReadKey();
+        }
+    }
+}
